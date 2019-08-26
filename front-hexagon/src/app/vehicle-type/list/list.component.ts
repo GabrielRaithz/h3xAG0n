@@ -28,16 +28,17 @@ export class ListTypeVehicleComponent implements OnInit {
     let updateFlag = true;
     this.service.getVehicles().forEach(res => {
       if (res[0].vehicle_type.id === vehicleType.id) {
-        alert('ainda há carros com esse tipo de veículo');
         updateFlag = false;
+        alert('Ainda há carros com esse tipo de veículo');
+      }
+    }).then(aux => {
+      if (updateFlag === true) {
+        this.service.deleteVehicleType(vehicleType).subscribe(res => {
+          this.vehiclesType = this.vehiclesType.filter(v => v !== vehicleType);
+          alert('Veículo retirado');
+      });
       }
     });
-    if (updateFlag === true) {
-      this.service.deleteVehicleType(vehicleType).subscribe(res => {
-        this.vehiclesType = this.vehiclesType.filter(v => v !== vehicleType);
-        alert('Veículo retirado');
-    });
-    }
   }
 
 }
