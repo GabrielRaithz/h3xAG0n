@@ -27,7 +27,7 @@ export class ListTypeVehicleComponent implements OnInit {
   Delete(vehicleType: VehicleType) {
     let updateFlag = true;
     this.service.getVehicles().forEach(res => {
-      if (res[0].vehicle_type.id === vehicleType.id) {
+      if (res[0] && res[0].vehicle_type.id === vehicleType.id) {
         updateFlag = false;
         alert('Ainda há carros com esse tipo de veículo');
       }
