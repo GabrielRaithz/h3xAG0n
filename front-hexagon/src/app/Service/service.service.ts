@@ -60,16 +60,7 @@ export class ServiceService {
   }
 
   deleteVehicleType(vehicleType: VehicleType) {
-    let updateFlag = true;
-    this.getVehicles().forEach(res => {
-      if (res[0].vehicle_type.id === vehicleType.id) {
-        alert('ainda há carros com esse tipo de veículo');
-        updateFlag = false;
-      }
-    });
-    if (updateFlag) {
-      return this.http.delete<VehicleType>(this.UrlVehicleType + '/' + vehicleType.id);
-    }
+    return this.http.delete<VehicleType>(this.UrlVehicleType + '/' + vehicleType.id);
   }
 
 }
