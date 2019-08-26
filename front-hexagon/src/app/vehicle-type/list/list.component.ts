@@ -32,7 +32,7 @@ export class ListTypeVehicleComponent implements OnInit {
         updateFlag = false;
       }
     });
-    if (updateFlag) {
+    if (updateFlag === true) {
       this.service.deleteVehicleType(vehicleType).subscribe(res => {
         this.vehiclesType = this.vehiclesType.filter(v => v !== vehicleType);
         alert('Veículo retirado');
