@@ -11,7 +11,7 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   UrlVehicle = 'http://ec2-18-231-109-21.sa-east-1.compute.amazonaws.com:8080/vehicle/';
-  UrlVehicleType = 'http://ec2-18-231-109-21.sa-east-1.compute.amazonaws.com/vehicle_type/';
+  UrlVehicleType = 'http://ec2-18-231-109-21.sa-east-1.compute.amazonaws.com:8080/vehicle_type/';
 
   getVehicles() {
     return this.http.get<Vehicle[]>(this.UrlVehicle);
