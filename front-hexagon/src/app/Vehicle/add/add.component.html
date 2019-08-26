@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Adicionar veículo</h3>
+        </div>
+        <div class="card-body">
+          <form ngNativeValidate>
+            <div class="form-group" >
+              <label for="name">Nome</label>
+              <input name="name" id="name" required type="text" [(ngModel)]="vehicle.name" class="form-control">
+
+              <label for="plate">Placa</label>
+              <input name="plate" required type="text" [(ngModel)]="vehicle.plate"  class="form-control">
+
+              <label for="descr">Descrição</label>
+              <input name="descr"  type="text" [(ngModel)]="vehicle.descr"  class="form-control">
+
+              <label for="vehicle_type">Tipo do veículo</label>
+              <select required class="form-control" name="vehicle_type" [(ngModel)]="vehicle.vehicle_type.id">  
+                <option *ngFor="let vt of vehiclesType" required [value]="vt.id">{{vt.name}}</option>
+              </select>
+
+              <button (click)="NewVehicle(vehicle)" class="btn btn-danger" style="margin-top: 10px" >Salvar</button>
+
+            </div>
+          </form>
+        </div>
+    </div>
+</div>

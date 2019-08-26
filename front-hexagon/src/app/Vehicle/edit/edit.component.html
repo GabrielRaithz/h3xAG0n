@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar veículos</h3>
+        </div>
+        <div class="card-body">
+          <form ngNativeValidate> 
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input [(ngModel)]="vehicle.name" required name="name" type="text" class="form-control">
+
+              <label for="plate">Placa</label>
+              <input [(ngModel)]="vehicle.plate" required name="plate" type="text" class="form-control">
+
+              <label for="descr">Descrição</label>
+              <input [(ngModel)]="vehicle.descr"  name="descr" type="text" class="form-control">
+
+              <label for="vehicle_type">Tipo do veículo</label>
+              <select required class="form-control" name="vehicle_type" [(ngModel)]="vehicle.vehicle_type.id">  
+                <option *ngFor="let vt of vehiclesType" required [value]="vt.id">{{vt.name}}</option>
+              </select>
+
+              <button (click)="Update(vehicle)" class="btn btn-danger" style="margin-top: 10px">Atualizar</button>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>

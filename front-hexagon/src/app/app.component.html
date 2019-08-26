@@ -1,0 +1,21 @@
+
+<div style="text-align: center; margin-bottom: 30px">
+  <h2>
+    Wellcome to  {{ title }}!
+  </h2>
+</div>
+
+<div class="container">
+  <div style="float: left;">
+    <button (click)="ListVehicle()" class="btn btn-info">Listar veículos</button>
+    <button (click)="NewVehicle()" class="btn btn-info" style="margin-left: 10px">Novo veiculo</button>
+  </div>
+  <div style="float: right;">
+    <button (click)="ListVehicleType()" class="btn btn-info">Listar tipo de veículos</button>
+    <button (click)="NewVehicleType()" class="btn btn-info" style="margin-left: 10px">Novo tipo de veiculo</button>
+  </div>
+</div>
+
+<div style="float: left; width: 60%; margin-left: 20%; margin-top: 30px; ">
+<router-outlet></router-outlet>
+</div>

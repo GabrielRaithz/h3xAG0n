@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+          <h3>Tipo de Veículos</h3>
+      </div>
+      <div class="card-body">
+          <table class="table table-hover">
+              <thead>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Ações</th>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let vehicleType of vehiclesType" class="text-left">
+                      <td>{{vehicleType.id}}</td>
+                      <td>{{vehicleType.name}}</td>
+                      <td>{{vehicleType.descr}}</td>
+                      <td>
+                          <button (click)="Edit(vehicleType)"  class="btn btn-warning">Editar</button>
+                          <button (click)="Delete(vehicleType)"  class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
