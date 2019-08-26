@@ -68,7 +68,7 @@ export class ServiceService {
       }
     });
     if (updateFlag) {
-      return this.http.delete<VehicleType>(this.UrlVehicleType + '/' + vehicleType.id);  
+      return this.http.delete<VehicleType>(this.UrlVehicleType + '/' + vehicleType.id);
     }
   }
 
