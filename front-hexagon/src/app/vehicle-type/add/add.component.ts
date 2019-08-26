@@ -22,8 +22,8 @@ export class AddTypeVehicleComponent implements OnInit {
       this.service.newVehicleType(vehicleType).
       subscribe(res => {
         alert('Novo tipo de veículo inserido');
+        this.router.navigate(['listVehicleType']);
       });
-      this.router.navigate(['listVehicleType']);
     }
   }
 
