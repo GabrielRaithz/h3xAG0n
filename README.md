@@ -7,10 +7,10 @@
 ###  Backend: Spring Boot
 Rodando no EC2 da amazon com acesso pela porta 8080
 - Duas classes foram criada, a Vehicle 
-Link para chamadas: http://ec2-18-231-109-21.sa-east-1.compute.amazonaws.com:8080/vehicle/
+Link para chamadas: 
 &
 VehicleType
-Link para chamadas: http://ec2-18-231-109-21.sa-east-1.compute.amazonaws.com:8080/vehicleType/
+Link para chamadas:
 
 
 
